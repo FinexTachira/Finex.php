@@ -1,0 +1,640 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --green: #38d39f;
+  --white: #fff;
+  --another-white: #eee;
+  --black0: #000;
+  --black1: #222;
+  --black2: #999;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*Navbar*/
+.Navbar {
+  height: 60px;
+  background-color: var(--white);
+  padding: 5px 10px;
+  background-image: linear-gradient(120deg, var(--green) 35%, #378a42 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000000;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+}
+
+.Nav h1 {
+  margin: 0 20px;
+}
+
+.Nav .menu-full {
+  margin-left: 180px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--white);
+  transition: 1s;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.logoFinex {
+  position: fixed;
+  top: 13px;
+  right: 40px;
+  width: 2.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bell {
+  position: fixed;
+  top: 15px;
+  right: 5px;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.myNotif {
+  color: inherit;
+  text-decoration: none;
+}
+
+.NameUser {
+  position: fixed;
+  top: 20px;
+  right: 75px;
+  font-size: 14px;
+  margin-right: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.NameUser:active {
+  color: var(--white);
+}
+/*Navbar*/
+
+/*Flex*/
+.flex {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.content {
+  margin-left: 300px;
+  width: calc(100% - 500px);
+  padding: 1rem 2rem;
+}
+/*Flex*/
+
+.modal_profile {
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  width: 60%;
+  height: 80%;
+  background-color: var(--another-white);
+  z-index: 10000000000000;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #eeeeee;
+  overflow: auto;
+}
+
+.show {
+  animation: show 1s;
+}
+
+.hide {
+  animation: hide 1s;
+}
+
+.none {
+  display: none;
+}
+
+#close {
+  cursor: pointer;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+    display: none;
+  }
+}
+
+@keyframes show {
+  0% {
+    display: all;
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.header-modal {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 25px 25px 0 0;
+}
+
+.bx-x-circle {
+  font-size: 1.4rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.body-modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.major {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+}
+
+.name-box {
+  background-color: var(--black1);
+  width: 100%;
+  height: auto;
+  padding: 10px 2px;
+}
+
+.names, .surnames {
+  margin-left: 60px;
+}
+
+.big-green {
+  font-size: 2.5rem;
+  color: var(--green);
+}
+
+.little-white {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.information-user {
+  margin: 10px 0 10px 20px;
+  width: calc(100% - 30px);
+  height: 100%;
+}
+
+.direction, .info-modal, .otra-info {
+  width: 100%;
+  background-color: var(--white);
+  padding: 10px 10px 10px 40px;
+  margin-bottom: 10px;
+  border-left: 5px solid var(--black2);
+}
+
+.direction h2, .info-modal h2, .otra-info h2 {
+  border-right: 5px solid var(--green);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.minor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+}
+
+.container-img {
+  background-color: var(--black1);
+  width: 100%;
+  height: 48%;
+}
+
+.img-usr {
+  position: relative;
+  padding-top: 10%;
+}
+
+.img-usr img {
+  display: block;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.bxs-camera {
+  font-size: 1.4rem;
+  color: var(--white);
+  cursor: pointer;
+  position: absolute;
+  right: 25%;
+  bottom: 0%;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+.document {
+  margin-top: 20px;
+  padding: 5px;
+  color: var(--white);
+  text-align: center;
+}
+
+.document h4 {
+  font-size: 1rem;
+}
+
+.document h5 {
+  font-size: .8rem;
+}
+
+.country {
+  margin-top: 20px;
+  padding: 5px;
+  color: var(--white);
+  text-align: center;
+}
+
+.country h4 {
+  font-size: 1rem;
+}
+
+.franja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black1);
+  width: 100%;
+  height: 4%;
+}
+
+.piso {
+  background-color: var(--green);
+  width: 100%;
+  height: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.last-session {
+  color: var(--white);
+  text-align: center;
+}
+/*Modal Profile*/
+
+/*Sidebar*/
+.Sidebar {
+  max-width: 300px;
+  width: 100%;
+  min-height: calc(100vh + 52px);
+  height: 100%;
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  background-color: var(--another-white);
+  overflow: auto;
+}
+
+/*mini*/
+.mini {
+  max-width: 4rem;
+  transition: 1s;
+}
+
+.mini li span {
+  display: none;
+  transition: 1s;
+}
+
+.mini li i {
+  font-size: 2rem;
+  transition: 1s;
+}
+
+.bx-menu {
+  margin-left: 0px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--white);
+  transition: 1s;
+}
+/*mini*/
+
+ul {
+  list-style: none;
+  margin-top: 30px;
+}
+
+li {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+li i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  transition: 1s;
+}
+
+li span {
+  transition: 1s;
+}
+
+ul a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--black1);
+}
+
+li:hover:not(.focus-list) {
+  background-color: var(--black2);
+  color: var(--another-white);
+}
+
+.focus-list {
+  background: var(--white);
+  color: var(--black1);
+  border-left: 5px solid var(--green);
+  text-shadow: none;
+}
+/*Sidebar*/
+
+/*Main*/
+.main_p2p {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: .5s;
+}
+
+.full {
+  width: calc(100% - 80px);
+  left: 80px;
+  transition: 1s;
+}
+
+.main_p2p .cardsBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.main_p2p .cardsBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main_p2p .cardsBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: var(--green);
+}
+
+.main_p2p .cardsBox .card .cardName {
+  color: var(--black2);
+  font-size: 1.8em;
+  margin-top: 5px;
+}
+
+.main_p2p .cardsBox .card .iconBox {
+  font-size: 3.5em;
+  color: var(--black2);
+}
+
+.main_p2p .cardsBox .card:hover {
+  background: var(--green);
+  transition: 500ms;
+}
+
+.main_p2p .cardsBox .card:hover .numbers ,
+.main_p2p .cardsBox .card:hover .cardName,
+.main_p2p .cardsBox .card:hover .iconBox {
+  color: var(--white);
+}
+/*Main*/
+
+/*Make Deposit*/
+.main_p2p .make_deposit_p2p {
+  position: relative;
+  width: calc(100% - 40px);
+  margin: 20px;
+  margin-top: 15px;
+  background: var(--white);
+  padding: 30px;
+  box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main_p2p .make_deposit_p2p .header_deposit_p2p h1 {
+  color: var(--green);
+  font-size: 2rem;
+}
+
+.main_p2p .make_deposit_p2p .form_p2p {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.main_p2p .make_deposit_p2p .form_p2p .inline {
+  width: 100%;
+  display: flex;
+}
+
+.main_p2p .make_deposit_p2p .form_p2p .inline input {
+  width: 70%;
+}
+
+.main_p2p .make_deposit_p2p .form_p2p .inline select {
+  width: 30%;
+}
+
+.main_p2p .make_deposit_p2p .form_p2p .inline select {
+  transition: 1s;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--black2);
+  background-color: var(--white);
+}
+
+.main_p2p .make_deposit_p2p .form_p2p .inline select:focus {
+  transition: 1s;
+  border-bottom: 1px solid var(--green);
+  color: var(--green);
+}
+
+.main_p2p .make_deposit_p2p .form_p2p input {
+  transition: 1s;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--black2);
+}
+
+.main_p2p .make_deposit_p2p .form_p2p input:focus {
+  transition: 1s;
+  border-bottom: 1px solid var(--green);
+  color: var(--green);
+}
+
+#Depositar, #ScanQR  {
+  transition: 1s;
+  padding: 10px;
+  margin: 5px;
+  outline: none;
+  border: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#Depositar {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+#ScanQR  {
+  background-color: #dbdbdd;
+  color: var(--black1);
+}
+
+.center {
+  text-align: center;
+}
+
+.main_p2p .history_p2p {
+  position: relative;
+  width: calc(100% - 40px);
+  margin: 20px;
+  margin-top: 15px;
+  background: var(--white);
+  padding: 30px;
+  box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main_p2p .history_p2p .header_history_p2p h1 {
+  color: var(--green);
+  font-size: 2rem;
+}
+/*Make Deposit*/
+
+/*Media Querys*/
+@media screen and (max-width:991px) {
+  .main_p2p {
+    width: 100%;
+    left: 0;
+  }
+
+  .main_p2p .cardsBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal_profile {
+    top: 10%;
+    left: 7%;
+    width: 86%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .modal_profile {
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .main_p2p .cardsBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Nav {
+    width: 100vw;
+  }
+
+  .Nav h1 {
+    display: none;
+  }
+
+  .Nav .menu-full {
+    margin: 12px 10px;
+    transition: 1.5s;
+  }
+  
+  .modal_profile {
+    top: 5%;
+    left: 2%;
+    width: 96%;
+    height: 90%;
+  }
+}
+/*Media Querys*/
