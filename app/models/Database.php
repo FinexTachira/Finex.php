@@ -17,8 +17,8 @@ class Database {
     /*Local*/
     $this->host = "localhost";
     $this->db   = "finex";
-    $this->user = "beltz";
-    $this->psw  = "andy7507650";
+    $this->user = "root";
+    $this->psw  = "";
   }
 
   #Conexión a la base de datos

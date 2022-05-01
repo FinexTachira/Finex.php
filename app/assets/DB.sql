@@ -372,10 +372,10 @@ CREATE TABLE IF NOT EXISTS ordenanzas_comision (
   TABLE CONVERSION
 */
 
-DROP TABLE IF EXISTS conversion;
+/*DROP TABLE IF EXISTS conversion;
 CREATE TABLE IF NOT EXISTS conversion (
   
-);
+);*/
 
 /*
   TRIGGERS
