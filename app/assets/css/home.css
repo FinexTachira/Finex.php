@@ -1,0 +1,1000 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+:root {
+  --green:  #fbd014;
+  --white:  #fff;
+  --another-white: #eee;
+  --black0: #000;
+  --black1: #222;
+  --black2: #999;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*Navbar*/
+.Navbar {
+  height: 60px;
+  background-color: var(--white);
+  padding: 5px 10px;
+  background-image: linear-gradient(120deg, var(--green) 35%, #d6a00d 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000000;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+}
+
+.Nav h1 {
+  margin: 0 20px;
+  color: var(--black1);
+}
+
+.Nav .menu-full {
+  margin-left: 180px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--black1);
+  transition: 1s;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.logoFinex {
+  position: fixed;
+  top: 13px;
+  right: 20px;
+  width: 2.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bell {
+  position: fixed;
+  top: 15px;
+  right: 5px;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.myNotif {
+  color: inherit;
+  text-decoration: none;
+}
+
+.NameUser {
+  position: fixed;
+  top: 20px;
+  right: 55px;
+  font-size: 14px;
+  margin-right: 5px;
+  color: var(--black1);
+  text-decoration: none;
+}
+
+.NameUser:active {
+  color: var(--white);
+}
+/*Navbar*/
+
+/*Flex*/
+.flex {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.content {
+  margin-left: 300px;
+  width: calc(100% - 500px);
+  padding: 1rem 2rem;
+}
+/*Flex*/
+
+/*Modal Profile*/
+.modal_profile {
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  width: 60%;
+  height: 80%;
+  background-color: var(--another-white);
+  z-index: 10000000000000;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #eeeeee;
+  overflow: auto;
+}
+
+.show {
+  animation: show 1s;
+}
+
+.hide {
+  animation: hide 1s;
+}
+
+.none {
+  display: none;
+}
+
+#close {
+  cursor: pointer;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+    display: none;
+  }
+}
+
+@keyframes show {
+  0% {
+    display: all;
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.header-modal {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 25px 25px 0 0;
+}
+
+.bx-x-circle {
+  font-size: 1.4rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.body-modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.major {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+}
+
+.name-box {
+  background-color: var(--black1);
+  width: 100%;
+  height: auto;
+  padding: 10px 2px;
+}
+
+.names, .surnames {
+  margin-left: 60px;
+}
+
+.big-green {
+  font-size: 2.5rem;
+  color: var(--green);
+}
+
+.little-white {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.information-user {
+  margin: 10px 0 10px 20px;
+  width: calc(100% - 30px);
+  height: 100%;
+}
+
+.direction, .info-modal, .otra-info {
+  width: 100%;
+  background-color: var(--white);
+  padding: 10px 10px 10px 40px;
+  margin-bottom: 10px;
+  border-left: 5px solid var(--black2);
+}
+
+.direction h2, .info-modal h2, .otra-info h2 {
+  border-right: 5px solid var(--green);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.minor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+}
+
+.container-img {
+  background-color: var(--black1);
+  width: 100%;
+  height: 48%;
+}
+
+.img-usr {
+  position: relative;
+  padding-top: 10%;
+}
+
+.img-usr img {
+  display: block;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.bxs-camera {
+  font-size: 1.4rem;
+  color: var(--white);
+  cursor: pointer;
+  position: absolute;
+  right: 25%;
+  bottom: 0%;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+.document {
+  margin-top: 20px;
+  padding: 5px;
+  color: var(--white);
+  text-align: center;
+}
+
+.document h4 {
+  font-size: 1rem;
+}
+
+.document h5 {
+  font-size: .8rem;
+}
+
+.country {
+  margin-top: 20px;
+  padding: 5px;
+  color: var(--white);
+  text-align: center;
+}
+
+.country h4 {
+  font-size: 1rem;
+}
+
+.franja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black1);
+  width: 100%;
+  height: 4%;
+}
+
+.piso {
+  background-color: var(--green);
+  width: 100%;
+  height: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.last-session {
+  color: var(--white);
+  text-align: center;
+}
+/*Modal Profile*/
+
+/*Sidebar*/
+.Sidebar {
+  max-width: 300px;
+  width: 100%;
+  min-height: calc(100vh + 52px);
+  height: 100%;
+  position: fixed;
+  top: 40px;
+  left: 0px;
+  background-color: var(--black1);
+  transition: 1s;
+}
+
+/*mini*/
+.mini {
+  max-width: 4rem;
+  transition: 1s;
+}
+
+.mini li span {
+  display: none;
+  transition: 1s;
+}
+
+.mini li i {
+  font-size: 2rem;
+  transition: 1s;
+}
+
+.bx-menu {
+  margin-left: 0px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--black1);
+  transition: 1s;
+}
+/*mini*/
+
+ul {
+  list-style: none;
+  margin-top: 30px;
+}
+
+li {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+li i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  transition: 1s;
+}
+
+li span {
+  transition: 1s;
+}
+
+ul a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--white);
+}
+
+li:hover:not(.focus-list) {
+  background-color: var(--black2);
+  color: var(--another-white);
+}
+
+.focus-list {
+  background: var(--white);
+  color: var(--black1);
+  border-left: 5px solid var(--green);
+  text-shadow: none;
+}
+/*Sidebar*/
+
+/*Main*/
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 1s;
+}
+
+.full {
+  width: calc(100% - 80px);
+  left: 80px;
+  transition: 1s;
+}
+
+.titleGreen {
+  padding: 20px;
+  margin-top: 25px;
+  color: var(--green);
+  text-align: center;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.tabla {
+  padding: 10px;
+}
+
+.myTabla {
+  margin: 15px 20px 10px 20px;
+  width: calc(100% - 40px);
+  text-align: center;
+}
+
+.myTabla thead {
+  background-color: var(--green);
+}
+
+.myTabla th, .myTabla td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.myTabla th {
+  margin-bottom: 10px;
+}
+
+.myTabla td {
+  font-weight: 300;
+  text-transform: none;
+}
+
+.main .cardsBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.main .cardsBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main .cardsBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: var(--green);
+}
+
+.main .cardsBox .card .cardName {
+  color: var(--black2);
+  font-size: .8em;
+  margin-top: 5px;
+}
+
+.main .cardsBox .card .iconBox {
+  font-size: 3.5em;
+  color: var(--black2);
+}
+
+.main .cardsBox .card:hover {
+  background: var(--green);
+  transition: 500ms;
+}
+
+.main .cardsBox .card:hover .numbers ,
+.main .cardsBox .card:hover .cardName,
+.main .cardsBox .card:hover .iconBox {
+  color: var(--black1);
+}
+/*Main*/
+
+/*Wallet*/
+.container-wallet {
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-wallet {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn-deposit {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.paypal {
+  background-color: var(--green);
+}
+
+.bancolombia {
+  background-color: #9e1515;
+  color: var(--white);
+}
+
+.nequi {
+  background-color: #0b22a5;
+  color: var(--white);
+}
+
+.bdv {
+  background-color: #d40d0d;
+  color: var(--white);
+}
+
+.container-wallet a {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.btn1 {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.btn2 { 
+  background-color: var(--another-white);
+}
+
+.btn3 {
+  background-color: var(--white);
+}
+
+#typeDiv {
+  width: 100%;
+  background-color: var(--white);
+  padding: 10px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid var(--black2);
+  transition: 1s;
+}
+
+#typeDiv:hover {
+  background-color: var(--another-white);
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid var(--black1);
+  transition: 1s;
+}
+
+.saldo-wallet-container {
+  width: auto;
+  margin: 30px 0;
+  border-left: 5px solid var(--green);
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-right: 5px solid var(--green);
+  padding: 5px  20px;
+}
+
+.wallets {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.fiat-wallets, .crypto-wallets {
+  width: 50%;
+}
+
+.fiat-wallets h2, .crypto-wallets h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  padding-left: 15px;
+}
+
+.fiat-wallets, .container-fiat-wallets {
+  border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.container-fiat-wallets, .container-crypto-wallets {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.container-fiat-wallets:hover, .container-crypto-wallets:hover {
+  background-color: var(--another-white);
+}
+/*Wallet*/
+
+/*Carrousel*/
+.carrousel {
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+  padding: 1em;
+}
+
+.title-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.title-controls h3 {
+  color: var(--green);
+}
+
+.indicators button {
+  background-color: var(--black1);
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 3px;
+}
+
+.indicators button:hover, .indicators button.active {
+  background-color: var(--green);
+}
+
+.container-carrousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  height: 20%;
+  top: calc(50% - 10%);
+  line-height: 40px;
+  width: 40px;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 500;
+  transition: all .2s ease-in-out;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
+}
+
+.main-carrousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.main-carrousel .slider {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slider .adviser {
+  min-width: 20%;
+  transition: .6s all ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+}
+
+.slider .adviser.hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.adviser .img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+/*Carrousel*/
+
+/*Little Cards*/
+
+/*Little Cards*/
+
+/*Form Sell Order*/
+.part1,
+.part2,
+.part3 {
+  width: 100%;
+  margin: 10px 0;
+  text-align: left;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.markSell {
+  width: 65%;
+  padding: 6px;
+  margin: 5px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.markSell:focus {
+  outline: none;
+  background-color: var(--another-white);
+}
+/*Form Sell Order*/
+
+/*TradingView*/
+.tradingview-widget-container {
+  margin: 20px;
+  background: var(--white);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  height: 520px;
+}
+
+.tradingview-widget-container #tradingview_08c98 {
+  height: 380px;
+}
+
+.tradingview-widget-container h2 {
+  margin-bottom: 20px;
+  color: var(--green);
+}
+/*TradingView*/
+
+/*Media Querys*/
+@media screen and (max-width:991px) and (min-width: 769px) {
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main .cardsBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal_profile {
+    top: 10%;
+    left: 7%;
+    width: 86%;
+    height: 80%;
+  }
+
+  .mini {
+    width: 100%;
+  }
+
+  .Sidebar.mini li span {
+    display: inline-block;
+    transition: 1s;
+  }
+
+  .Sidebar.mini {
+    z-index: 10000;
+    left: 0px;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .Sidebar.mini ul {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:768px) and (min-width: 481px) {
+  .main .cardsBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal_profile {
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+  }
+
+  .wallets {
+    display: block;
+  }
+
+  .fiat-wallets, .crypto-wallets {
+    width: 100%;
+  }
+
+  .fiat-wallets, .container-fiat-wallets {
+    border-right: none;
+  }
+
+  .main {
+    width: 100%;
+    margin-left: -300px;
+  }
+
+  .Nav {
+    width: 100vw;
+  }
+
+  .Nav h1 {
+    display: none;
+  }
+
+  .Nav .menu-full {
+    margin: 12px 10px;
+    transition: 1.5s;
+  }
+
+  .Sidebar {
+    left: -100%;
+  }
+
+  .mini {
+    width: 100%;
+  }
+
+  .Sidebar.mini li span {
+    display: inline-block;
+    transition: 1s;
+  }
+
+  .Sidebar.mini {
+    z-index: 10000;
+    left: 0px;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .Sidebar.mini ul {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:480px) and (min-width: 380px) {
+  .main .cardsBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .main .user {
+    min-width: 40px;
+  }
+
+  .wallets {
+    display: block;
+  }
+
+  .fiat-wallets, .crypto-wallets {
+    width: 100%;
+  }
+
+  .fiat-wallets, .container-fiat-wallets {
+    border-right: none;
+  }
+
+  .Nav {
+    width: 100vw;
+  }
+
+  .Nav h1 {
+    display: none;
+  }
+
+  .Nav .menu-full {
+    margin: 12px 10px;
+    transition: 1.5s;
+  }
+
+  .modal_profile {
+    top: 5%;
+    left: 2%;
+    width: 96%;
+    height: 90%;
+  }
+
+  .main {
+    width: 100%;
+    margin-left: -300px;
+  }
+
+  .Sidebar {
+    left: -100%;
+  }
+
+  .mini {
+    width: 100vw;
+  }
+
+  .Sidebar.mini li span {
+    display: inline-block;
+    transition: 1s;
+  }
+
+  .Sidebar.mini {
+    z-index: 10000;
+    left: 0px;
+    width: 100vw;
+    max-width: 100vw;
+  }
+}
+
+@media screen and (max-width:379px) and (min-width: 249px) {
+  .main .cardsBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .main .user {
+    min-width: 40px;
+  }
+
+  .wallets {
+    display: block;
+  }
+
+  .fiat-wallets, .crypto-wallets {
+    width: 100%;
+  }
+
+  .fiat-wallets, .container-fiat-wallets {
+    border-right: none;
+  }
+
+  .Nav {
+    width: 100vw;
+  }
+
+  .Nav h1 {
+    display: none;
+  }
+
+  .Nav .menu-full {
+    margin: 12px 10px;
+    transition: 1.5s;
+  }
+
+  .modal_profile {
+    top: 5%;
+    left: 2%;
+    width: 96%;
+    height: 90%;
+  }
+}
+/*Media Querys*/
